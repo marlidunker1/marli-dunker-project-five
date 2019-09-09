@@ -5,3 +5,134 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+/* GENERAL STYLES */
+
+
+/* font-family: 'Permanent Marker', cursive;
+
+font-family: 'Rock Salt', cursive;
+
+font-family: 'Reenie Beanie', cursive; */
+
+
+
+html {
+  font-size: 125%;
+  background: url(images/paper.jpg);
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+p {
+  font-family: 'Reenie Beanie', cursive;
+  letter-spacing: 1.2px;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.highlightBlue {
+  background: linear-gradient(to right, rgba(	176,224,230, 0.8) 0%, rgba(	176,224,230, 0.4) 100%);
+}
+
+.highlightOrange {
+  background: linear-gradient(to right, rgba(	255,165,0 , 0.8) 0%, rgba(	255,165,0 , 0.4) 100%);
+  padding: 5px 20px;
+  border: 5px dashed black;
+}
+
+/* HEADER STYLES */
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  margin: 40px 0 0 0;
+  letter-spacing: 1.4px;
+}
+
+.headerP {
+  margin-top: 15px;
+  padding: 5px;
+  border: 5px dashed black;
+}
+
+/* MAIN STYLES */
+
+form {
+  margin-top: 30px;
+  width: 100%;
+  border: none;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  font-family: 'Reenie Beanie', cursive;
+  text-transform: uppercase;
+  width: 15%;
+}
+
+h2 {
+ font-family: 'Permanent Marker', cursive;
+ width: 100%;
+ display: block;
+ text-align: center;
+ margin-top: 50px;
+}
+
+input {
+  background: linear-gradient(to right, rgba(	255,165,0 , 0.8) 0%, rgba(	255,165,0 , 0.4) 100%);
+  text-align: center;
+  width: 15%;
+  border: 5px dashed black;
+  font-family: 'Reenie Beanie', cursive;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-family: 'Permanent Marker', cursive;
+  margin-right: 10px;
+}
+
+input:focus {
+  border: 5px dashed red;
+  color: red;
+}
+
+input:hover {
+  border: 5px dashed yellow;
+  color: yellow;
+}
+
+button {
+  background: linear-gradient(to right, rgba(73, 251, 53, 0.8) 0%, rgba(	73, 251, 53, 0.4) 100%);
+  border: 5px dashed black;
+  font-family: 'Permanent Marker', cursive;
+}
+
+button:active {
+  border: 5px dashed rgba(	73, 251, 53, 0.4);
+  color: rgba(	73, 251, 53, 0.4);
+}
+
+button:focus {
+  border: 5px dashed red;
+  color: red;
+}
+
+button:hover {
+  border: 5px dashed yellow;
+  color: yellow;
+}
+
+.input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}

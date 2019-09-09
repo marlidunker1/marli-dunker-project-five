@@ -7,14 +7,21 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <header >
-         <h1>Hello World</h1>
-         <form>
-          <OneRepMax />
-          <SetCalc />
-         </form>
+         <h1>Strength Program</h1>
+         <p className="headerP highlightBlue">Give the maximum weight that you can lift for one repetition in one of the the four core strength lifts (deadlift, squat, benchpress, or overhead press) to generate a four week strength plan to improve that maximum weight.</p>
         </header>
+        <main>
+         <form>
+          <fieldset className="inputField">
+           <OneRepMax />
+          </fieldset>
+          <fieldset className="scheduleField">
+            <SetCalc />
+          </fieldset>
+         </form>
+        </main>
       </div>
     );
   };

@@ -25,16 +25,18 @@ class OneRepMax extends Component{
     
     render() {
         return (
-          <div className="Input">
-              <label htmlFor="oneRep">Type in your One Rep Max:</label>
-              <input 
-                id="oneRep" 
-                type="number"
-                name="userInput"
-                onChange={this.handleChange}
-                value={this.state.user}
-              />
-              <button onClick={this.handleSubmit}>Submit</button>
+          <div className="input">
+            <label htmlFor="oneRep">One Rep Max: </label>
+            <input 
+              id="oneRep" 
+              type="number"
+              name="userInput"
+              onChange={this.handleChange}
+              value={this.state.userInput}
+            />
+            <label> lbs</label>
+            <button onClick={this.handleSubmit}>Submit</button>
+            <h2>Four Week plan based off <span className="highlightOrange">{this.state.userInput}</span>&nbsp;lbs</h2>
           </div>
         );
       };
