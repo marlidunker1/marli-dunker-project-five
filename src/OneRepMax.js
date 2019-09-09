@@ -26,9 +26,22 @@ class OneRepMax extends Component{
         dbRef.set(input);
     };
 
+    componentDidMount() {
+      //Get data from firebase
+      const dbRef = firebase.database().ref('/maxWeight');
+      
+      dbRef.on("value", data => {
+        //response is maxWEight
+        const maxWeight = data.val();
+        this.setState({
+            userInput: maxWeight,
+        });
+      });
+    };
     
     
     render() {
+
         return (
           <div className="input">
             <label htmlFor="oneRep">One Rep Max: </label>

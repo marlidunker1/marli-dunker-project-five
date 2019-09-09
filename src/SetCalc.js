@@ -12,15 +12,14 @@ class SetCalc extends Component{
       }
 
     handleChange = event => {
-        console.log('checkbox state', event.target.value);
+        console.log('checkbox state', event.target.checked);
         const dbRef = firebase.database().ref('/completed');
-
-        const completed = event.target.value;
-        console.log('this is va', completed);
+        
         this.setState({
-            isComplete: !completed,
+          isChecked: event.target.checked,
         });
-        // dbRef.push(this.state.isComplete);
+       
+        dbRef.set(this.state.isChecked);
     };
 
     componentDidMount() {
@@ -31,8 +30,6 @@ class SetCalc extends Component{
       dbRef.on("value", data => {
         //response is maxWEight
         const maxWeight = data.val();
-        console.log(maxWeight);
-
         this.setState({
             userInput: maxWeight,
         });
@@ -40,12 +37,11 @@ class SetCalc extends Component{
       });
 
       dbRefTwo.on("value", data => {
-        //response is maxWEight
         const completed = data.val();
         console.log(completed);
 
         this.setState({
-            isComplete: completed,
+            isChecked: completed,
         });
 
       });
@@ -62,9 +58,10 @@ class SetCalc extends Component{
               <label className="setLabel">
                 Complete:
                 <input
-                type="checkbox"
-                name="isComplete"
-                onChange={this.handleChange}
+                  type="checkbox"
+                  checked={this.state.isChecked}
+                  onChange={this.handleChange}
+                  value="isChecked"
                 />
               </label>
             </div>
