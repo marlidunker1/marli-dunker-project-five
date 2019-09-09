@@ -89,7 +89,7 @@ h2 {
 }
 
 input {
-  background: linear-gradient(to right, rgba(	255,165,0 , 0.8) 0%, rgba(	255,165,0 , 0.4) 100%);
+  background: linear-gradient(to right, rgba(73, 251, 53, 0.8) 0%, rgba(	73, 251, 53, 0.4) 100%);
   text-align: center;
   width: 15%;
   border: 5px dashed black;
@@ -114,6 +114,7 @@ button {
   background: linear-gradient(to right, rgba(73, 251, 53, 0.8) 0%, rgba(	73, 251, 53, 0.4) 100%);
   border: 5px dashed black;
   font-family: 'Permanent Marker', cursive;
+  font-size: 1.1rem;
 }
 
 button:active {
@@ -135,4 +136,37 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+/* SCHEDULE */
+
+h3 {
+  font-family: 'Permanent Marker', cursive;
+  margin: 0;
+}
+
+h4 {
+  font-family: 'Permanent Marker', cursive;
+  margin: 0;
+}
+
+.set {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 40%;
+}
+
+.setLabel {
+  font-family: 'Rock Salt', cursive;
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+
+.setLabel input {
+  margin-left: 10px;
+  padding: 5px;
 }

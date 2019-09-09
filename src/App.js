@@ -18,6 +18,7 @@ class App extends Component {
            <OneRepMax />
           </fieldset>
           <fieldset className="scheduleField">
+            <h3>Week 1</h3>
             <SetCalc />
           </fieldset>
          </form>

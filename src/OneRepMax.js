@@ -18,10 +18,15 @@ class OneRepMax extends Component{
 
     handleSubmit = event => {
         event.preventDefault();
-        const dbRef = firebase.database().ref();
-        dbRef.push(this.state.userInput);
+        const input = this.state.userInput;
+        const dbRef = firebase.database().ref('/maxWeight');
+        //looking for /reps folder every time we set a number as opposed to created a new number/key everytime
+        console.log(dbRef)
+        // we are using set instead of push because push pushes a new number while set acts as if you're reassigning a vairable (replacing)
+        dbRef.set(input);
     };
 
+    
     
     render() {
         return (
