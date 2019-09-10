@@ -50,8 +50,9 @@ p {
 
 h1 {
   font-family: 'Permanent Marker', cursive;
-  margin: 40px 0 0 0;
+  margin: 20px 0 0 0;
   letter-spacing: 1.4px;
+  text-align: center;
 }
 
 .headerP {
@@ -77,7 +78,14 @@ fieldset {
 label {
   font-family: 'Reenie Beanie', cursive;
   text-transform: uppercase;
-  width: 15%;
+}
+
+.enter {
+  width: 40%;
+}
+
+.lbs {
+  width: 5%;
 }
 
 h2 {
@@ -86,6 +94,7 @@ h2 {
  display: block;
  text-align: center;
  margin-top: 50px;
+ line-height: 65px;
 }
 
 input {
@@ -117,6 +126,10 @@ button {
   font-size: 1.1rem;
 }
 
+.save {
+  margin-left: 30px;
+}
+
 button:active {
   border: 5px dashed rgba(	73, 251, 53, 0.4);
   color: rgba(	73, 251, 53, 0.4);
@@ -136,13 +149,24 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  text-align:center; 
+  justify-content: center;
+
 }
 
 /* SCHEDULE */
 
+.scheduleField {
+  display: flex;
+  border: 5px dashed black;
+  padding: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
 h3 {
   font-family: 'Permanent Marker', cursive;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 
 h4 {
@@ -154,7 +178,8 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 40%;
+  width: 25%;
+  text-align: center;
 }
 
 .setLabel {
@@ -164,9 +189,39 @@ h4 {
   display: flex;
   flex-direction: row;
   margin-right: 10px;
+  margin-top: 10px;
+}
+
+.setInput {
+  margin: 0 auto;
 }
 
 .setLabel input {
   margin-left: 10px;
-  padding: 5px;
+  height: 20px;
+  width: 20px;
+  align-self: center;
+}
+
+/* MEDIA QUERIES */
+
+/* Portrait tablet and small desktops */
+@media (max-width: 900px) {
+  
+  .set {
+    width: 50%;
+  }
+
+  h3 {
+    margin-top: 25px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  
+  .set {
+    width: 100%;
+  }
+
 }

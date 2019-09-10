@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import firebase from "./firebase";
 import OneRepMax from './OneRepMax';
-import SetCalc from './SetCalc';
+import WeekOne from './WeekOne';
+import WeekTwo from './WeekTwo';
+import WeekThree from './WeekThree';
+import WeekFour from './WeekFour';
 import './App.css';
 
 class App extends Component {
@@ -18,8 +21,10 @@ class App extends Component {
            <OneRepMax />
           </fieldset>
           <fieldset className="scheduleField">
-            <h3>Week 1</h3>
-            <SetCalc />
+            <WeekOne />
+            <WeekTwo />
+            <WeekThree />
+            <WeekFour />
           </fieldset>
          </form>
         </main>

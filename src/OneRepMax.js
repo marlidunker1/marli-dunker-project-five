@@ -6,7 +6,7 @@ class OneRepMax extends Component{
     constructor() {
         super();
         this.state = {
-            userInput: "",
+            userInput: false,
         };
       }
 
@@ -21,7 +21,6 @@ class OneRepMax extends Component{
         const input = this.state.userInput;
         const dbRef = firebase.database().ref('/maxWeight');
         //looking for /reps folder every time we set a number as opposed to created a new number/key everytime
-        console.log(dbRef)
         // we are using set instead of push because push pushes a new number while set acts as if you're reassigning a vairable (replacing)
         dbRef.set(input);
     };
@@ -38,13 +37,11 @@ class OneRepMax extends Component{
         });
       });
     };
-    
-    
+     
     render() {
-
         return (
           <div className="input">
-            <label htmlFor="oneRep">One Rep Max: </label>
+            <label className="enter" htmlFor="oneRep">Enter One Rep Max: </label>
             <input 
               id="oneRep" 
               type="number"
@@ -52,8 +49,8 @@ class OneRepMax extends Component{
               onChange={this.handleChange}
               value={this.state.userInput}
             />
-            <label> lbs</label>
-            <button onClick={this.handleSubmit}>Submit</button>
+            <label className="lbs"> lbs</label>
+            <button className="save" onClick={this.handleSubmit}>Save</button>
             <h2>Four Week plan based off <span className="highlightOrange">{this.state.userInput}</span>&nbsp;lbs</h2>
           </div>
         );
