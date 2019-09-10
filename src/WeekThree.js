@@ -6,7 +6,7 @@ class WeekThree extends Component{
     constructor() {
         super();
         this.state = {
-            isComplete: false,
+            isChecked: false,
             userInput: 0,
         };
       }

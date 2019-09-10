@@ -13,7 +13,7 @@ class App extends Component {
       <div className="wrapper">
         <header >
          <h1>Strength Program</h1>
-         <p className="headerP highlightBlue">Give the maximum weight that you can lift for one repetition in one of the the four core strength lifts (deadlift, squat, benchpress, or overhead press) to generate a four week strength plan to improve that maximum weight.</p>
+         <p className="headerP highlightBlue">Enter maximum weight you can lift in an exersize of your choice to generate a four week strength plan to improve that maximum weight. Your maximum weight is saved witht he "Save" button your data and progress will be maintained through refreshes. Hit reset to start anew.</p>
         </header>
         <main>
          <form>
