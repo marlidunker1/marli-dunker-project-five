@@ -65,7 +65,7 @@ class WeekOne extends Component{
             </div>
             <div>
               <h4>Set 3</h4>
-              <p>5 reps of {Math.ceil((this.state.userInput*.85)/5)*5} lbs </p>
+              <p>5+ reps of {Math.ceil((this.state.userInput*.85)/5)*5} lbs </p>
               {/* number will always round up to nearest five as there a no 1 lb plates */}
             </div>
             <div className="setInput">

@@ -81,7 +81,7 @@ label {
 }
 
 .enter {
-  width: 40%;
+
 }
 
 .lbs {
@@ -222,6 +222,20 @@ h4 {
   
   .set {
     width: 100%;
+  }
+
+  .save {
+    margin-top: 30px;
+    margin-left: 0;
+    width: 60%;
+  }
+
+  h2 {
+    margin-top: 20px;
+  }
+
+  input {
+    width: 30%;
   }
 
 }
