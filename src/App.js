@@ -13,7 +13,7 @@ class App extends Component {
       <div className="wrapper">
         <header >
          <h1>Strength Program</h1>
-         <p className="headerP highlightBlue">Enter maximum weight you can lift in an exersize of your choice to generate a four week strength plan to improve that maximum weight. Your maximum weight is saved witht he "Save" button your data and progress will be maintained through refreshes. Hit reset to start anew.</p>
+         <p className="headerP highlightBlue">Enter maximum weight you can lift in an exersize of your choice to produce a four week plan to improve that maximum weight."Save" button saves your max weight andprogress will be maintained by checkbox. Hit reset to start anew. <span className="knownError">Known limitation:you have to click checkbox twice to save "check".</span></p>
         </header>
         <main>
          <form>

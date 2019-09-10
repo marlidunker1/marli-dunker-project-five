@@ -60,6 +60,10 @@ h1 {
   border: 5px dashed black;
 }
 
+.knownError {
+  color: red;
+}
+
 /* MAIN STYLES */
 
 form {
@@ -91,7 +95,7 @@ h2 {
  width: 100%;
  display: block;
  text-align: center;
- margin-top: 50px;
+ margin-top: 30px;
  line-height: 65px;
 }
 
