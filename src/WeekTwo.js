@@ -82,7 +82,7 @@ class WeekTwo extends Component{
           </div>
           
         );
-      };
+    };
 }
 
 export default WeekTwo;

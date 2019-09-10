@@ -12,7 +12,6 @@ class WeekThree extends Component{
       }
 
     handleChange = event => {
-        console.log('checkbox state', event.target.checked);
         const dbRef = firebase.database().ref('/completedWeekThree');
         
         this.setState({
@@ -79,10 +78,9 @@ class WeekThree extends Component{
                 />
               </label>
             </div>
-          </div>
-          
+          </div>     
         );
-      };
+    };
 }
 
 export default WeekThree;

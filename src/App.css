@@ -145,6 +145,17 @@ button:hover {
   color: yellow;
 }
 
+button.save:disabled, input.maxNumber:disabled {
+  border: 5px dashed rgba( 0, 0 , 0, 0.4);
+  color: rgba( 0, 0 , 0, 0.4);
+  background: rgba( 0, 0 , 0, 0.4);
+}
+
+.reset {
+  margin-left: 20px;
+  background: linear-gradient(to right, rgba(220,20,60, 0.8) 0%, rgba(	220,20,60, 0.4) 100%);
+}
+
 .input {
   display: flex;
   flex-wrap: wrap;
@@ -224,10 +235,14 @@ h4 {
     width: 100%;
   }
 
-  .save {
+  .save, .reset {
     margin-top: 30px;
     margin-left: 0;
-    width: 60%;
+    width: 40%;
+  }
+
+  .save {
+    margin-right: 10px;
   }
 
   h2 {
