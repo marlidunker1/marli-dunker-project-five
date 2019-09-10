@@ -7,17 +7,15 @@ class WeekThree extends Component{
         super();
         this.state = {
             isComplete: false,
-            userInput: "",
+            userInput: 0,
         };
       }
 
     handleChange = event => {
-        const dbRef = firebase.database().ref('/completedWeekThree');
-        
+        const dbRef = firebase.database().ref('/completedWeekThree');      
         this.setState({
           isChecked: event.target.checked,
-        });
-       
+        });     
         dbRef.set(this.state.isChecked);
     };
 
@@ -32,21 +30,15 @@ class WeekThree extends Component{
         this.setState({
             userInput: maxWeight,
         });
-
       });
 
       dbRefTwo.on("value", data => {
         const completed = data.val();
-        console.log(completed);
-
         this.setState({
             isChecked: completed,
         });
-
       });
-
-    };
-    
+    };    
     
     render() {
         return (

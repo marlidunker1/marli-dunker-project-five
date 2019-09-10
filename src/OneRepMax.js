@@ -31,7 +31,6 @@ class OneRepMax extends Component{
     componentDidMount() {
       //Get data from firebase
       const dbRef = firebase.database().ref('/maxWeight');
-      
       dbRef.on("value", data => {
         //response is maxWEight
         const maxWeight = data.val();
@@ -47,8 +46,7 @@ class OneRepMax extends Component{
        const dbRefWeekOne = firebase.database().ref('/completedWeekOne');
        const dbRefWeekTwo = firebase.database().ref('/completedWeekTwo');
        const dbRefWeekThree = firebase.database().ref('/completedWeekThree');
-       const dbRefWeekFour = firebase.database().ref('/completedWeekFour');
-      
+       const dbRefWeekFour = firebase.database().ref('/completedWeekFour');   
        dbRef.set(0);
        dbRefWeekOne.set(false);
        dbRefWeekTwo.set(false);

@@ -7,18 +7,15 @@ class WeekOne extends Component{
         super();
         this.state = {
             isComplete: false,
-            userInput: "",
+            userInput: 0,
         };
       }
 
     handleChange = event => {
-        console.log('checkbox state', event.target.checked);
-        const dbRef = firebase.database().ref('/completedWeekOne');
-        
+        const dbRef = firebase.database().ref('/completedWeekOne');       
         this.setState({
           isChecked: event.target.checked,
-        });
-       
+        });      
         dbRef.set(this.state.isChecked);
     };
 
@@ -33,21 +30,15 @@ class WeekOne extends Component{
         this.setState({
             userInput: maxWeight,
         });
-
       });
 
       dbRefTwo.on("value", data => {
         const completed = data.val();
-        console.log(completed);
-
         this.setState({
             isChecked: completed,
         });
-
       });
-
-    };
-    
+    };   
     
     render() {
         return (
@@ -79,8 +70,7 @@ class WeekOne extends Component{
                 />
               </label>
             </div>
-          </div>
-          
+          </div>        
         );
     };
 }

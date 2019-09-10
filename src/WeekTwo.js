@@ -7,18 +7,15 @@ class WeekTwo extends Component{
         super();
         this.state = {
             isComplete: false,
-            userInput: "",
+            userInput: 0,
         };
       }
 
     handleChange = event => {
-        console.log('checkbox state', event.target.checked);
-        const dbRef = firebase.database().ref('/completedWeekTwo');
-        
+        const dbRef = firebase.database().ref('/completedWeekTwo');       
         this.setState({
           isChecked: event.target.checked,
-        });
-       
+        });       
         dbRef.set(this.state.isChecked);
     };
 
@@ -38,16 +35,11 @@ class WeekTwo extends Component{
 
       dbRefTwo.on("value", data => {
         const completed = data.val();
-        console.log(completed);
-
         this.setState({
             isChecked: completed,
         });
-
       });
-
-    };
-    
+    };    
     
     render() {
         return (
@@ -79,8 +71,7 @@ class WeekTwo extends Component{
                 />
               </label>
             </div>
-          </div>
-          
+          </div>         
         );
     };
 }
